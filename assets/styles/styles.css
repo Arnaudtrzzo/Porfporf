@@ -333,6 +333,19 @@ header{
 }
 
 
+@media(max-width:1024px){
+    h2{
+        font-size: 2.2rem;
+    }
+    .skill {
+        padding: 25px 15px;
+    }
+    .skill img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 @media(max-width:810px){
     header{
         height:60px !important;
@@ -341,14 +354,18 @@ header{
     .header-menu-mobile{
         display: block;
         border: 0px;
-        background-color: #fff;
+        background-color: transparent;
         position: absolute;
-        left:50%;
+        left: 20px;
         top:50%;
         transform: translateY(-50%);
         cursor: pointer;
-        padding: 10px 15px;
-
+        padding: 10px 0;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    .header-menu-mobile span{
+        cursor: pointer;
     }
     .header-logo{
         position: absolute;
@@ -357,47 +374,62 @@ header{
         transform: translate(-50%,-50%);
 
     }
+    .header-logo img{
+        width: 50px;
+    }
     .header-menu{
         position: fixed;
-        top:0;
+        top:60px;
         left:0;
         width: 100%;
-        height: 100vh;
-        background-color: #f8fbfd;
+        height: calc(100vh - 60px);
+        background-color: #ffffff;
         flex-direction:column ;
         align-items: center;
-        justify-content: center;
-        gap: 30px;
+        justify-content: flex-start;
+        gap: 0;
         display: none;
+        padding-top: 30px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        z-index: 998;
+    }
+    .header-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .header-menu li a{
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid #e8f1f5;
     }
     .header-menu li:last-child a{
-        margin-top: 10px;
+        margin-top: 0;
     }
     h2{
         font-size:1.75rem ;
         margin-bottom:20px ;
 
     }
+    h1 {
+        font-size: 2.5rem;
+    }
     .fond{
-        height: 60vh;
+        height: 50vh;
         margin-top: 60px;
+        aspect-ratio: unset;
     }
     
     .fond-content{
         width: 90%;
     }
     .fond-content p{
-        margin-top:20px ;
-        font-size: 1.2rem;
-        text-wrap: balance;
+        margin-top:15px ;
+        font-size: 1rem;
     }
 
-    h1{
-        font-size: 2rem;
-    }
     p{
-        font-size: 1rem;
-        text-wrap: balance;
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
     .toColumn{
         flex-direction: column;
@@ -412,32 +444,174 @@ header{
         width: 100% !important;
     }
     .section{
-      padding:50px 0 ;
+      padding:40px 0 ;
     }
     .boxed{
-        max-width: 90%;
-
+        max-width: 95%;
+        padding-inline: 15px;
     }
     .wm47{
-        width: 47% ;
+        width: 48% ;
     }
     .mgap20{
-        gap: 20px;
+        gap: 15px;
     }
     .skill {
-        padding: 25px 15px;
+        padding: 20px 15px;
     }
     .skill img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
+    }
+    .skill h3 {
+        font-size: 0.95rem;
     }
     .profile-photo {
         max-width: 250px;
-        margin: 0 auto 30px;
+        margin: 0 auto 20px;
     }
     .about-left {
         order: -1;
     }
+    .contact {
+        padding: 30px 20px;
+    }
+    .icon{
+        font-size: 40px !important;
+    }
+    .gap20{
+        gap: 15px;
+    }
+}
 
+@media(max-width:640px){
+    header {
+        height: 50px !important;
+    }
+    .header-menu{
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size:1.5rem ;
+        margin-bottom:15px ;
+    }
+    .fond{
+        height: 40vh;
+        margin-top: 50px;
+    }
+    .fond-content p{
+        font-size: 0.95rem;
+    }
+    .section{
+        padding: 30px 0;
+    }
+    .skill {
+        padding: 15px 10px;
+    }
+    .skill img {
+        width: 70px;
+        height: 70px;
+    }
+    .wm47{
+        width: 100%;
+    }
+    .realisation{
+        margin-bottom: 20px;
+    }
+    .contact {
+        padding: 20px 15px;
+    }
+    .icon{
+        font-size: 35px !important;
+    }
+    .label{
+        font-size: 0.95rem;
+    }
+    .value{
+        font-size: 0.9rem;
+    }
+    .profile-photo {
+        max-width: 200px;
+        margin: 0 auto 15px;
+    }
+}
 
+@media(max-width:480px){
+    header {
+        height: 50px !important;
+    }
+    .header-logo img{
+        width: 40px;
+    }
+    .header-menu-mobile{
+        left: 15px;
+        font-size: 1.3rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+    h2{
+        font-size:1.3rem ;
+        margin-bottom:15px ;
+    }
+    .fond{
+        height: 35vh;
+        min-height: auto;
+    }
+    .section{
+        padding: 25px 0;
+    }
+    .boxed{
+        max-width: 100%;
+        padding-inline: 12px;
+    }
+    .skill {
+        padding: 12px 8px;
+    }
+    .skill img {
+        width: 60px;
+        height: 60px;
+    }
+    .skill h3{
+        font-size: 0.85rem;
+        margin-top: 10px;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    .contact {
+        padding: 15px 10px;
+        margin-bottom: 15px;
+    }
+    .icon{
+        font-size: 30px !important;
+        margin-bottom: 10px;
+    }
+    .label{
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+    .value{
+        font-size: 0.85rem;
+    }
+    .profile-photo {
+        max-width: 150px;
+    }
+    .about-left h2, .about-right h2 {
+        font-size: 1.3rem;
+    }
+    .w25 {
+        width: 100%;
+    }
+    .w32 {
+        width: 100%;
+    }
+    .top-section {
+        padding: 20px 0;
+    }
 }
